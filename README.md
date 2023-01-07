@@ -76,7 +76,7 @@ THEN I should have proper build scripts for a webpack application
 
 ## Usage
 
-[home screen](./Develop/client/src/images/Screenshot%202023-01-06%20201930.png)
+![home screen](./Develop/client/src/images/Screenshot%202023-01-06%20201930.png)
 
 ## Credits
 
