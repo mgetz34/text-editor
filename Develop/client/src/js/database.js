@@ -27,7 +27,6 @@ export const putDb = async (content) => {
   const result = await request;
   console.log('🚀 - data saved to the database', result);
   return result;
-
 };
 
 // Add logic for a method that gets all the content from the database
@@ -44,7 +43,7 @@ export const getDb = async () => {
   // Get confirmation of the request
   const result = await request;
   console.log('result.value', result);
-  return result;
+  return result.value;
 };
 
 initdb();
