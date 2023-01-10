@@ -4,21 +4,21 @@
 
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-#### Table of Contents:
+## Table of Contents:
 
-#### [User Story](#user-story)
+- [User Story](#user-story)
 
-#### [Acceptance Criteria](#acceptance-criteria)
+- [Acceptance Criteria](#acceptance-criteria)
 
-#### [License](#license)
+- [License](#license)
 
-#### [Description](#description)
+- [Description](#description)
 
-#### [Installation](#installation)
+- [Installation](#installation)
 
-#### [Usage](#usage)
+- [Usage](#usage)
 
-#### [Questions](#questions)
+- [Questions](#questions)
 
 ## License
 
@@ -65,7 +65,7 @@ THEN I should have proper build scripts for a webpack application
 ## Description
 
 The app was build as a text editor that runs in the browser. This app is a single-page application that meets PWA criteria. This app also features a number of data persistence techniques that serve as redundancy in case one of the options is not supported by the browser. The application will also function offline.
-This app utilizes a package called idb, which is a lightweight wrapper around the IndexedDB API. IDB features a number of methods that are useful for storing and retrieving data. The importance of PWAs is ever increasing in the development community. This application helped to learn the concepts of PWAs and associated criteria, indexdDB use and implementation, and service-worker use for offline app functionality and data-persistance. 
+This app utilizes a package called idb, which is a lightweight wrapper around the IndexedDB API. IDB features a number of methods that are useful for storing and retrieving data. The importance of PWAs is ever increasing in the development community. This application helped to learn the concepts of PWAs and associated criteria, indexdDB use and implementation, and service-worker use for offline app functionality and data-persistance.
 
 ## Installation
 
