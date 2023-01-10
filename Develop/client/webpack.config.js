@@ -23,8 +23,8 @@ module.exports = () => {
       }),
       //Add and configure workbox plugins for a service worker and manifest file
       new InjectManifest({
-        swSrc: './sw.js',
-        swDest: './sw.js',
+        swSrc: './src/sw.js',
+        swDest: 'service-worker.js',
       }),
       new WebpackPwaManifest({
         name: 'Just Another Text Editor',
