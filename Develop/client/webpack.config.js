@@ -1,8 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const path = require('path');
-const { GenerateSW } = require('workbox-webpack-plugin');
-// const { InjectManifest } = require('workbox-webpack-plugin');
+const { InjectManifest } = require('workbox-webpack-plugin');
 
 
 
@@ -23,7 +22,10 @@ module.exports = () => {
         title: 'J.A.T.E'
       }),
       //Add and configure workbox plugins for a service worker and manifest file
-      new GenerateSW(),
+      new InjectManifest({
+        swSrc: './sw.js',
+        swDest: './sw.js',
+      }),
       new WebpackPwaManifest({
         name: 'Just Another Text Editor',
         short_name: 'J.A.T.E',
@@ -34,9 +36,9 @@ module.exports = () => {
         publicPath: './',
         icons: [
           {
-            src: path.resolve('./src/images/logo.png'),
+            src: path.resolve('src/images/logo.png'),
             sizes: [96, 128, 192, 256, 384, 512],
-            destination: path.join('client', 'icons'),
+            destination: path.join('assets', 'icons'),
           },
         ],
       }),
@@ -47,6 +49,10 @@ module.exports = () => {
         {
           test: /\.css$/i,
           use: ['style-loader', 'css-loader'],
+        },
+        {
+          test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
+          type: 'asset/icons'
         },
         {
           test: /\.m?js$/,
