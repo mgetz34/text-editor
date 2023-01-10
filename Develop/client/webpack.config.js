@@ -1,8 +1,8 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const path = require('path');
-const { InjectManifest } = require('workbox-webpack-plugin');
 const { GenerateSW } = require('workbox-webpack-plugin');
+// const { InjectManifest } = require('workbox-webpack-plugin');
 
 
 
@@ -28,8 +28,8 @@ module.exports = () => {
         name: 'Just Another Text Editor',
         short_name: 'J.A.T.E',
         description: 'Keep track of code snippets!',
-        background_color: '#7eb4e2',
-        theme_color: '#7eb4e2',
+        // background_color: '#7eb4e2',
+        // theme_color: '#7eb4e2',
         start_url: './',
         publicPath: './',
         icons: [
