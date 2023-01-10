@@ -23,8 +23,8 @@ module.exports = () => {
       }),
       //Add and configure workbox plugins for a service worker and manifest file
       new InjectManifest({
-        swSrc: './sw.js',
-        swDest: './sw.js',
+        swSrc: '/sw.js',
+        swDest: 'service-worker.js',
       }),
       new WebpackPwaManifest({
         name: 'Just Another Text Editor',
@@ -36,7 +36,7 @@ module.exports = () => {
         publicPath: './',
         icons: [
           {
-            src: path.resolve('./src/images/logo.png'),
+            src: path.resolve('src/images/logo.png'),
             sizes: [96, 128, 192, 256, 384, 512],
             destination: path.join('assets', 'icons'),
           },
@@ -48,11 +48,11 @@ module.exports = () => {
       rules: [
         {
           test: /\.css$/i,
-          use: ['css-loader'],
+          use: ['style-loader', 'css-loader'],
         },
         {
-          test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
-          type: 'asset/icons'
+          test: /\.(png|svg|jpg|jpeg|gif)$/i,
+          type: 'assets/icons'
         },
         {
           test: /\.m?js$/,
