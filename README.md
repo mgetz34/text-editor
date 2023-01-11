@@ -75,7 +75,7 @@ npm i, npm run start, navigate to http://localhost:3000, use app with or without
 
 ## Usage
 
-![home screen](./Develop/client/src/images/Screenshot%202023-01-06%20201930.png)
+![home screen](./client/src/images/Screenshot%202023-01-06%20201930.png)
 
 ## Questions
 
